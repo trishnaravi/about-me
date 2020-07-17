@@ -6,7 +6,7 @@
     <app-family-list
       *ngFor="let family of familyArray"
       [family]="family"
-      (friendClicked)="parentFamilyFunctionHandler($event)"
+      (familyClicked)="parentFamilyFunctionHandler($event)"
     ></app-family-list>
   </div>
   <div style="text-align:center;">
