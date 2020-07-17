@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div style="text-align:center;">
+    <h1>Mi Familia!</h1>
+  </div>
+  <div class="card-deck" style="text-align:center;">
+    <app-family-list
+      *ngFor="let family of familyArray"
+      [family]="family"
+      (friendClicked)="parentFamilyFunctionHandler($event)"
+    ></app-family-list>
+  </div>
+  <div style="text-align:center;">
+    <h1>Mi Amigos!</h1>
+  </div>
+  <div class="card-deck">
+    <app-friend-list
+      *ngFor="let friend of friendArray"
+      [friend]="friend"
+      (friendClicked)="parentFriendFunctionHandler($event)"
+    ></app-friend-list>
+  </div>
+  <div style="text-align:center;">
+    <h1>Mis Pasatiempos!</h1>
+  </div>
+  <div class="card-deck">
+    <app-hobbies-list
+      *ngFor="let hobby of hobbyArray"
+      [hobby]="hobby"
+      (hobbyClicked)="parentHobbyFunctionHandler($event)"
+    ></app-hobbies-list>
+  </div>
+</div>
